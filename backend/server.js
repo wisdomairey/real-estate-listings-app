@@ -39,7 +39,10 @@ app.use('/api/', limiter);
 // CORS configuration
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? ['https://your-frontend-domain.com']
+    ? [
+        'https://propertyhub-frontend.onrender.com', // Replace with your actual frontend URL
+        'https://your-custom-domain.com' // Add any custom domains here
+      ]
     : ['http://localhost:3000'],
   credentials: true
 }));

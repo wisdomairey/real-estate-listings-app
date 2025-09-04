@@ -1,4 +1,7 @@
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 
+  (process.env.NODE_ENV === 'production' 
+    ? 'https://propertyhub-yzax.onrender.com/api'
+    : 'http://localhost:5000/api');
 
 // Mapbox configuration - Using a demo token for development
 export const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN || 'pk.eyJ1IjoiZGVtby11c2VyIiwiYSI6ImNrcXVrY2QyMjBzeTkydm51M3YyYjhlaXMifQ.abc123_demo_token';
